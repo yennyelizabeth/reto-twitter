@@ -1,5 +1,7 @@
 var parameterLimitCharacters = 140;
 var regressive = 0;
+document.getElementById('button').disabled = true;
+
 
 window.addEventListener('load', function(event) {
   var button = document.getElementById('button');
@@ -9,18 +11,22 @@ window.addEventListener('load', function(event) {
     var textarea = document.getElementById('textarea');
     var textAreaText = textarea.value ;
 
-    /* ubico área para crear elementos */
-    var sectionDivs = document.querySelector('section'); /* selecciono section*/
+    if (textAreaText !== '') {
+      /* ubico área para crear elementos */
+      var sectionDivs = document.querySelector('section');
 
-    /* creación de elemento p y nodo texto text */
-    var pVar = document.createElement('p') ;
-    var text = document.createTextNode(textAreaText);
+      /* creación de elemento p y nodo texto text */
+      var pVar = document.createElement('p') ;
+      var text = document.createTextNode(textAreaText);
 
-    /* asignar hijos a elementos seleccionados */
-    pVar.appendChild(text);
-    sectionDivs.appendChild(pVar);
+      /* verificar el tamaño de texto a guardar*/
 
-    textarea.value = '' ;
+      /* asignar hijos a elementos seleccionados */
+      pVar.appendChild(text);
+      sectionDivs.appendChild(pVar);
+
+      textarea.value = '' ;
+    }
   });
 
   /* Evento Presión de Tecla */
@@ -32,6 +38,7 @@ window.addEventListener('load', function(event) {
 
     /* asigna la cantidad de caracteres  */
     if (textAreaText.length > 0) {
+      document.getElementById('button').disabled = false;
       regressive = parameterLimitCharacters - textAreaText.length ;
       label.textContent = regressive ;
     }

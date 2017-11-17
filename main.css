@@ -1,3 +1,9 @@
+body {
+background-color: #B2FFFF ;
+
+
+}
+
 div {
 width : 500px;
 height: 100px;
@@ -7,7 +13,7 @@ background-color :yellow;
 p {
   width : 500px;
   height: 100px;
-  background-color :yellow;
+  background-color :white;
 }
 
 .red {
