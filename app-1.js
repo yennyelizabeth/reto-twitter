@@ -26,6 +26,10 @@ window.addEventListener('load', function(event) {
       sectionDivs.appendChild(pVar);
 
       textarea.value = '' ;
+      regressive=0;
+      label.textContent = regressive ;
+      label.classList.remove('red', 'green', 'blue');
+      label.classList.add('black');
     }
   });
 
