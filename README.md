@@ -6,5 +6,5 @@ css(estilo) y javascript (funcionalidad y eventos).
 
 Presentación de Inicio
 ----------------------
-![Inicio](assets/images/4.jpg)
+![Inicio](assets/4.jpg)
 
